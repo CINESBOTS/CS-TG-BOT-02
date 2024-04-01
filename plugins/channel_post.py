@@ -39,14 +39,13 @@ async def new_post(client: Client, message: Message):
     if DISABLE_CHANNEL_BUTTON:
         return
 
-converted_id = message.id * abs(client.db_channel.id)
-string = f"get-{converted_id}"
-base64_string = await encode(string)
-link = f"https://t.me/{client.username}?start={base64_string}"
-share_link = f"https://telegram.me/share/url?url={link}"
-
-try:
-    await message.reply_text(f"Here's your generated link: {share_link}")
-except Exception as e:
-    print(e)
-    pass
+    converted_id = message.id * abs(client.db_channel.id)
+    string = f"get-{converted_id}"
+    base64_string = await encode(string)
+    link = f"https://t.me/{client.username}?start={base64_string}"
+    reply_text(f"<b>Here is yoursss link</b>\n\n{link}"
+    try:
+        await message.edit_reply_markup(reply_markup)
+    except Exception as e:
+        print(e)
+        pass
