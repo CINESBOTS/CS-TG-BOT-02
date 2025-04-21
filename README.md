@@ -1,3 +1,7 @@
+# Deploy Now 
+Deploy Now  [Heroku](https://dashboard.heroku.com/new?template=https://github.com/CINESBOTS/CS-TG-BOT-01).
+
+
 # File-sharing-Bot
 
 <p align="center">
